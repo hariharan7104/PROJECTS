@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Feedback Form</title>
+  <link rel="stylesheet" href="../css/googleform.css" />
+</head>
+<body>
+  <div class="form-container">
+    <h2>Student Feedback Form</h2>
+    <form action="../php/save_feedback.php" method="post">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="subject">Subject</label>
+      <select id="subject" name="subject" required>
+        <option value="">Select Subject</option>
+        <option value="IT">Information Technology</option>
+        <option value="CIVIL">Civil Engineering</option>
+        <option value="Maths">Mathematics</option>
+        <option value="Physics">Physics</option>
+        <option value="Chemistry">Chemistry</option>
+        <option value="English">English</option>
+      </select>
+
+      <label for="teacher_name">Teacher</label>
+      <select id="teacher_name" name="teacher_name" required>
+        <option value="">Select Teacher</option>
+        <option value="John Doe">John Doe</option>
+        <option value="Jane Smith">Jane Smith</option>
+        <option value="Michael Lee">Michael Lee</option>
+        <option value="Emily Clark">Emily Clark</option>
+        <option value="David Kim">David Kim</option>
+        <option value="Sophia Liu">Sophia Liu</option>
+      </select>
+
+      <label>Subject Content Quality</label>
+      <div class="radio-group">
+        <label><input type="radio" name="subject_quality" value="Excellent" required /> Excellent</label>
+        <label><input type="radio" name="subject_quality" value="Good" /> Good</label>
+        <label><input type="radio" name="subject_quality" value="Average" /> Average</label>
+        <label><input type="radio" name="subject_quality" value="Poor" /> Poor</label>
+      </div>
+
+      <label>Teaching Effectiveness</label>
+      <div class="radio-group">
+        <label><input type="radio" name="teaching_effectiveness" value="Excellent" required /> Excellent</label>
+        <label><input type="radio" name="teaching_effectiveness" value="Good" /> Good</label>
+        <label><input type="radio" name="teaching_effectiveness" value="Average" /> Average</label>
+        <label><input type="radio" name="teaching_effectiveness" value="Poor" /> Poor</label>
+      </div>
+
+      <label>Topics Covered</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="topics[]" value="Unit 1" /> Unit 1</label>
+        <label><input type="checkbox" name="topics[]" value="Unit 2" /> Unit 2</label>
+        <label><input type="checkbox" name="topics[]" value="Unit 3" /> Unit 3</label>
+        <label><input type="checkbox" name="topics[]" value="Unit 4" /> Unit 4</label>
+      </div>
+
+      <label>Rate the Overall Subject</label>
+      <div class="radio-group">
+        <label><input type="radio" name="overall_rating" value="1" required /> 1 ⭐</label>
+        <label><input type="radio" name="overall_rating" value="2" /> 2 ⭐⭐</label>
+        <label><input type="radio" name="overall_rating" value="3" /> 3 ⭐⭐⭐</label>
+        <label><input type="radio" name="overall_rating" value="4" /> 4 ⭐⭐⭐⭐</label>
+        <label><input type="radio" name="overall_rating" value="5" /> 5 ⭐⭐⭐⭐⭐</label>
+      </div>
+
+      <label for="comments">Suggestions for Improvement</label>
+      <textarea id="comments" name="comments" placeholder="Your suggestions..."></textarea>
+
+      <input type="submit" value="Submit Feedback" />
+    </form>
+  </div>
+</body>
+</html>
